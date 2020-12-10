@@ -41,4 +41,14 @@ public class App {
 
         return newArr;
     }
+
+    public int[] reverse(int[] arr) {
+        int[] newArr = new int[arr.length];
+
+        for (int i = 0; i < newArr.length; i++) {
+            newArr[i] = arr[newArr.length - i - 1];
+        }
+
+        return newArr;
+    }
 }

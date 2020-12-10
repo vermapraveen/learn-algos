@@ -52,4 +52,18 @@ public class ArrayTests {
 
         assertThat(updatedArr[2]).isEqualTo(5);
     }
+
+    @Test
+    public void givenArrayOf10Elements_ShouldAbleToReverse() {
+
+        int[] arr = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        App sut = new App();
+        int[] arr_rev = sut.reverse(arr);
+
+        assertThat(arr_rev.length).isEqualTo(10);
+        for (int i = 0; i < arr_rev.length; i++) {
+            assertThat(arr_rev[i]).isEqualTo(arr[arr.length - i - 1]);
+        }
+
+    }
 }
