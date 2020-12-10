@@ -38,4 +38,18 @@ public class ArrayTests {
             assertThat(arr[i]).isEqualTo(initWith);
         }
     }
+
+    @Test
+    public void givenArrayOfLength10_shouldAbleToAdd5AtIndex2() {
+        int sizeOfArr = 10;
+        int initWith = -1;
+
+        App sut = new App();
+        int[] arr = sut.createAndInit(sizeOfArr, initWith);
+
+        int[] updatedArr = sut.addAtIndex(arr, 5, 2);
+        assertThat(updatedArr.length).isEqualTo(sizeOfArr + 1);
+
+        assertThat(updatedArr[2]).isEqualTo(5);
+    }
 }

@@ -27,7 +27,7 @@ Solve Techinque
 
 # Data Structure Operations
 1. Create
-2. Add
+2. Add: a) Add at Index b)Exception Handling
 3. Delete
 4. Traverse
 5. Search
