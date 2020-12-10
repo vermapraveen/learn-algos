@@ -11,7 +11,13 @@ public class App
         System.out.println( "Hello World!" );
     }
 
-    public int someMethod() {
-        return 10;
+    public int[] createAndInit(int size, int initWith) {
+        int[] anArr = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            anArr[i] = initWith;
+        }
+
+        return anArr;
     }
 }

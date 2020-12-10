@@ -13,14 +13,29 @@ public class ArrayTests {
      */
     @Test
     public void shouldAbleToCreateArrayWithLenghth5() {
-        assertThat("The Lord of the Rings").isNotNull()   
-                                       .startsWith("The") 
-                                       .contains("Lord") 
-                                       .endsWith("Rings"); 
+        int sizeOfArr = 5;
+        int initWith = -2;
+
+        int[] arr = new App().createAndInit(sizeOfArr, initWith);
+
+        assertThat(arr.length).isEqualTo(sizeOfArr);
+        for (int i = 0; i < sizeOfArr; i++) {
+
+            assertThat(arr[i]).isEqualTo(initWith);
+        }
     }
 
     @Test
     public void shouldAbleToCreateArrayWithLenghth10() {
-        assertThat(new App().someMethod()).isEqualTo(10);
+        int sizeOfArr = 10;
+        int initWith = -1;
+
+        int[] arr = new App().createAndInit(sizeOfArr, initWith);
+
+        assertThat(arr.length).isEqualTo(sizeOfArr);
+        for (int i = 0; i < sizeOfArr; i++) {
+
+            assertThat(arr[i]).isEqualTo(initWith);
+        }
     }
 }
