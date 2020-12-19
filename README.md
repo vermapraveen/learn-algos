@@ -3,25 +3,29 @@ I am sure I will persist!
 Optimize Technique
 Solve Techinque
 
-# Data Structure: 
+# Simple Data Structure: 
 1. Array
 2. Rotated Array
 3. String
-4. HashTable
-5. Set
-6. HashSet
-7. ArrayList
-8. Resizable ArrayList
-9. StringBuilder
-10. LinkedList
-11. Stack
-12. Queue
-13. Tree
-14. Graph [NOT REQUIRED]
-15. Sorting
+4. Set
+5. HashSet
+6. ArrayList
+7. Resizable ArrayList
+8. StringBuilder
+9. LinkedList
+10. Tree
+11. Graph
+12. Trie
+13. Sorting
     1.  Quicksort
-16. Searching
+14. Searching
     1.  Binary Search
+
+# Derived Data structure
+1. Stack via array
+2. Queue via array
+3. 2D array
+4. Hashtable via array
 
 # Concepts:
 1. BigO
@@ -42,8 +46,9 @@ Solve Techinque
    4. Reverse
 4. Traverse
 5. Sort
-6. Find 
-   1. in Sorted elements + in unsorted elements + with missing numbers + with duplicate elements + with positive numbers + with positive and negative number + rotated array + use BitSet in Java to find it
+6. Size
+7. Find 
+   1. in contiguous + Sorted elements + in unsorted elements + with missing numbers + with duplicate elements + with positive numbers + with positive and negative number + rotated array + use BitSet in Java to find it
       1. Only 1 missing number
       2. List of mising numbers
       3. If element exist in array (search)

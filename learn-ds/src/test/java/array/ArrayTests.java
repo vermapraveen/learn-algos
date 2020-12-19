@@ -11,7 +11,7 @@ public class ArrayTests {
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAbleToCreateArrayWithLenghth5() {
+    public void a1_arr_create() {
         int sizeOfArr = 5;
         int initWith = -2;
 
@@ -25,21 +25,7 @@ public class ArrayTests {
     }
 
     @Test
-    public void shouldAbleToCreateArrayWithLenghth10() {
-        int sizeOfArr = 10;
-        int initWith = -1;
-
-        int[] arr = new ArrayHelper().createAndInit(sizeOfArr, initWith);
-
-        assertThat(arr.length).isEqualTo(sizeOfArr);
-        for (int i = 0; i < sizeOfArr; i++) {
-
-            assertThat(arr[i]).isEqualTo(initWith);
-        }
-    }
-
-    @Test
-    public void givenArrayOfLength10_shouldAbleToAdd5AtIndex2() {
+    public void a2_arr_addAtIndex() {
         int sizeOfArr = 10;
         int initWith = -1;
 
@@ -53,7 +39,7 @@ public class ArrayTests {
     }
 
     @Test
-    public void givenArrayOf10Elements_ShouldAbleToReverse() {
+    public void a3_arr_reverse() {
 
         int[] arr = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         ArrayHelper sut = new ArrayHelper();
@@ -67,20 +53,18 @@ public class ArrayTests {
     }
 
     @Test
-    public void givenArrayOf10Int_WhenStartIndexAs1_ShouldAbleToFind_1_MissingNumber() {
+    public void a4_arr_con_sort_find1MissingNumber() {
         int[] arr = { 1, 2, 3, 5, 6, 7, 8, 9, 10 };
         ArrayHelper sut = new ArrayHelper();
-        assertThat(sut.printMissingNumbersWithStartIndexAs1(arr, 10)).isEqualTo(4);
+        assertThat(sut.getMissing_1(arr, 10)).isEqualTo(4);
     }
 
     @Test
-    public void givenArrayOf10Int_WhenStartIndexAs1_ShouldAbleToFind_2_MissingNumber_algo2() {
-        int[] arr = { 1, 2, 3, 5, 6, 7, 8, 9, 10};
+    public void a5_arr_con_sort_findMultipleMissingNumbers() {
+        int[] arr = { 1, 2, 3, 5, 6, 7, 9, 10};
+        int[] expected = {4, 8}; 
         ArrayHelper sut = new ArrayHelper();
-        int[] mi = sut.getMissingNumbers(arr, 1, 10);
-
-        for (int i = 0; i < mi.length; i++) {
-            assertThat(mi[i]).isEqualTo(4);
-        }
+        int[] mi = sut.getMissing_2(arr, 1, 10);
+        assertThat(expected).isEqualTo(mi);
     }
 }
