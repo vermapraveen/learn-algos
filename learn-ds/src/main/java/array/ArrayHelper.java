@@ -45,12 +45,21 @@ public class ArrayHelper {
     public int printMissingNumbersWithStartIndexAs1(int[] arr, int end_index) {
 
         int expectedSum = (end_index * (end_index + 1) / 2);
+        int time_com = 0;
+        int space_com = 0;
 
         int actual_sum = 0;
 
         for (int i = 0; i < arr.length; i++) {
+            time_com++;
             actual_sum = actual_sum + arr[i];
         }
+
+
+        System.out.println("printMissingNumbersWithStartIndexAs1");
+        System.out.println("Time_Com: " + time_com + " for Input size: " + arr.length);
+        System.out.println("Sapce_com: " + space_com + " for Input size: " + arr.length);
+
 
         int missing_number = expectedSum - actual_sum;
         return missing_number;
@@ -77,8 +86,9 @@ public class ArrayHelper {
             }
         }
 
-        System.out.println("Time_Com: " + time_com + " for " + (end_index - start_index + 1));
-        System.out.println("Sapce_com: " + space_com + " for " + (end_index - start_index + 1));
+        System.out.println("getMissingNumbers");
+        System.out.println("Time_Com: " + time_com + " for Input size: " + (end_index - start_index + 1));
+        System.out.println("Sapce_com: " + space_com + " for Input size: " + (end_index - start_index + 1));
 
         // for (int i = 0; i < missing_numbers.length; i++) {
         //     System.out.println(missing_numbers[i]);

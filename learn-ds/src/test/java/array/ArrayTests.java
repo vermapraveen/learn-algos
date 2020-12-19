@@ -68,15 +68,19 @@ public class ArrayTests {
 
     @Test
     public void givenArrayOf10Int_WhenStartIndexAs1_ShouldAbleToFind_1_MissingNumber() {
-        int[] arr = { 1, 2, 3, 5, 6, 7, 9, 8, 10 };
+        int[] arr = { 1, 2, 3, 5, 6, 7, 8, 9, 10 };
         ArrayHelper sut = new ArrayHelper();
         assertThat(sut.printMissingNumbersWithStartIndexAs1(arr, 10)).isEqualTo(4);
     }
 
     @Test
     public void givenArrayOf10Int_WhenStartIndexAs1_ShouldAbleToFind_2_MissingNumber_algo2() {
-        int[] arr = { 3};
+        int[] arr = { 1, 2, 3, 5, 6, 7, 8, 9, 10};
         ArrayHelper sut = new ArrayHelper();
-        sut.getMissingNumbers(arr, 2, 10);
+        int[] mi = sut.getMissingNumbers(arr, 1, 10);
+
+        for (int i = 0; i < mi.length; i++) {
+            assertThat(mi[i]).isEqualTo(4);
+        }
     }
 }
